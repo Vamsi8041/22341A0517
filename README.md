@@ -1,68 +1,36 @@
+
+
 ````markdown
 # URL Shortener Service
 
-A simple URL shortener built with Node.js and Express. Shortens long URLs and allows redirecting via short links.
+A simple URL shortener built with Node.js and Express.
 
 ---
 
-## Prerequisites
-
-- Node.js (v14 or higher recommended)
-- npm (Node Package Manager)
-
----
-
-## Installation
-
-1. Clone the repository:
+## Installation & Running
 
 ```bash
-git clone https://github.com/your-username/url-shortener.git
+# 1. Navigate to project folder
+cd your-project-folder
+
+# 2. Install dependencies
+npm install
+
+# 3. Run the server
+node index.js
 ````
 
-2. Navigate to the project folder:
-
-```bash
-cd url-shortener
-```
-
-3. Install dependencies:
-
-```bash
-npm install
-```
+* Server runs on **[http://localhost:3006](http://localhost:3006)**
 
 ---
 
-## Running the Server
-
-Start the server with:
-
-```bash
-node index.js
-```
-
-Or use `nodemon` for auto-restart on changes:
-
-```bash
-npx nodemon index.js
-```
-
-The server runs on **port 3006** by default. Open in your browser or API client at:
-
-```
-http://localhost:3006
-```
-
----
-
-## Using the API in Postman
+## Using Postman
 
 ### 1. Shorten a URL
 
 * **Method:** POST
 * **URL:** `http://localhost:3006/api/shorten`
-* **Body:** Select **raw → JSON** and send:
+* **Body:** Select **raw → JSON**:
 
 ```json
 {
@@ -70,7 +38,7 @@ http://localhost:3006
 }
 ```
 
-* **Response:**
+* **Response Example:**
 
 ```json
 {
@@ -85,7 +53,7 @@ http://localhost:3006
 ### 2. Access Shortened URL
 
 * **Method:** GET
-* **URL:** Use the `shortUrl` returned from the POST request, e.g.:
+* **URL:** Use the `shortUrl` from the previous response, e.g.:
 
 ```
 http://localhost:3006/abc123
@@ -97,5 +65,15 @@ http://localhost:3006/abc123
 
 ### 3. Health Check
 
-* **Met
+* **Method:** GET
+* **URL:** `http://localhost:3006/`
+* Returns:
 
+```
+URL Shortener service is operational.
+```
+
+```
+
+If you want, I can also make an **even shorter version** with just commands and Postman examples so it’s 100% paste-ready. Do you want me to do that?
+```
